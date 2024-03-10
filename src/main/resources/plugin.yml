@@ -2,37 +2,3 @@ name: Commanderoos
 version: '${version}'
 main: com.nearvanilla.commanderoos.Commanderoos
 api-version: '1.20'
-commands:
-  map:
-    description: Shows a link to the dynmap
-    usage: /<command>
-    aliases: ["dynmap", "bluemap"]
-
-  farm:
-    description: Shows a link to the public farm directory
-    usage: /<command>
-    aliases: ["farms"]
-
-  tunnel:
-    description: Shows a link to the nether tunnel directory
-    usage: /<command>
-    aliases: ["tunnels"]
-
-  shop:
-    description: Shows a link to the shop directory
-    usage: /<command>
-    aliases: ["shops"]
-
-  awards:
-    description: Shows a link to the awards page
-    usage: /<command>
-    aliases: ["scores", "highscores"]
-
-  donate:
-    description: Shows a link to support the server
-    usage: /<command>
-
-  website:
-    description: Shows a link for the website
-    usage: /<command>
-    aliases: ["site"]

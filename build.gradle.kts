@@ -2,6 +2,7 @@ plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "1.9.22"
     id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("com.diffplug.spotless") version "6.23.3"
     id("xyz.jpenilla.run-paper") version "2.2.0"
 }
 group = "com.nearvanilla"
@@ -22,6 +23,9 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
+    implementation("cloud.commandframework", "cloud-paper", "1.8.4")
+    implementation("cloud.commandframework:cloud-annotations:1.8.4")
+    annotationProcessor("cloud.commandframework:cloud-annotations:1.8.4")
 }
 
 val targetJavaVersion = 17
@@ -64,5 +68,21 @@ tasks.build{
 tasks {
     runServer {
         minecraftVersion("1.20.4")
+    }
+}
+
+spotless {
+    format("misc") {
+        target(listOf("**/*.gradle", "**/*.md"))
+        trimTrailingWhitespace()
+        indentWithSpaces(4)
+    }
+    kotlin {
+        ktlint("1.1.0").editorConfigOverride(
+            mapOf(
+                "max_line_length" to 500
+            )
+        )
+        licenseHeader("/* Licensed under GNU General Public License v3.0 */")
     }
 }
