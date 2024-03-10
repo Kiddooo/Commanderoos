@@ -14,6 +14,7 @@ import org.bukkit.entity.Player
 class WebsiteCommand {
     @CommandDescription("Shows a link for the website")
     @CommandMethod("website|site")
+    @Suppress("unused")
     fun websiteCommand(sender: CommandSender) {
 
         if (sender !is Player) {

@@ -12,6 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin
 import java.util.function.Function
 import java.util.logging.Logger
 
+@Suppress("unused")
 class Commanderoos : JavaPlugin() {
     companion object{
         lateinit var pluginLogger: Logger

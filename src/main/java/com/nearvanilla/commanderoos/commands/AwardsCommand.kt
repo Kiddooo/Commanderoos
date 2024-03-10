@@ -1,3 +1,4 @@
+
 package com.nearvanilla.commanderoos.commands
 
 import cloud.commandframework.annotations.CommandDescription
@@ -14,6 +15,7 @@ import org.bukkit.entity.Player
 class AwardsCommand {
     @CommandDescription("Shows a link to the awards page")
     @CommandMethod("awards|highscores|scores")
+    @Suppress("unused")
     fun awardsCommand(sender: CommandSender) {
 
         if (sender !is Player) {

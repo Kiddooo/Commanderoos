@@ -14,6 +14,7 @@ import org.bukkit.entity.Player
 class MapCommand {
     @CommandDescription("Shows a link to the dynmap/bluemap")
     @CommandMethod("map|dynmap|bluemap")
+    @Suppress("unused")
     fun mapCommand(sender: CommandSender) {
 
         if (sender !is Player) {

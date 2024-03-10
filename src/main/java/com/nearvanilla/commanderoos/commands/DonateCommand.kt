@@ -14,6 +14,7 @@ import org.bukkit.entity.Player
 class DonateCommand {
     @CommandDescription("Shows a link to support the server")
     @CommandMethod("donate")
+    @Suppress("unused")
     fun donateCommand(sender: CommandSender) {
 
         if (sender !is Player) {

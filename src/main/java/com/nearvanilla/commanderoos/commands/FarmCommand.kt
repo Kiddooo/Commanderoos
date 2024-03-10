@@ -14,6 +14,7 @@ import org.bukkit.entity.Player
 class FarmCommand {
     @CommandDescription("Shows a link to the public farm directory")
     @CommandMethod("farm|farms")
+    @Suppress("unused")
     fun farmCommand(sender: CommandSender) {
 
         if (sender !is Player) {

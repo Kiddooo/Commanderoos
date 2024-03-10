@@ -14,6 +14,7 @@ import org.bukkit.entity.Player
 class TunnelCommand {
     @CommandDescription("Shows a link to the nether tunnel directory")
     @CommandMethod("tunnel|tunnels")
+    @Suppress("unused")
     fun tunnelCommand(sender: CommandSender) {
 
         if (sender !is Player) {

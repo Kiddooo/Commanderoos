@@ -14,6 +14,7 @@ import org.bukkit.entity.Player
 class ShopCommand {
     @CommandDescription("Shows a link to the shop directory")
     @CommandMethod("shop|shops")
+    @Suppress("unused")
     fun shopCommand(sender: CommandSender) {
 
         if (sender !is Player) {
